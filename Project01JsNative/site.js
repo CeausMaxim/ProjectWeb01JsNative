@@ -172,6 +172,7 @@ function displayCart() {
     }
 }
 
+validationHandler();
 var totalAmount;
 var totalItems;
 var totalSaving;
@@ -239,3 +240,40 @@ function removeFromCart(itemId) {
     }
 }
 
+// Validation
+function validationHandler() {
+    const validateButton = document.getElementById('deliverybtn');
+
+    validateButton.addEventListener('click', () => {
+        this.validateData();
+    })
+}
+
+function validateData() {
+    const name = document.getElementById("name");
+    const phone = document.getElementById('phone');
+    const email = document.getElementById("email");
+    const phoneRegexp = /^[\+373|373]*[0]*[0-9]{7,8}$/;
+    const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (!(new RegExp(/^[a-zA-Z ]{2,30}$/).test(name.value))) {
+        console.log("Error. Repeat input name");
+        return;
+    }
+
+    if (!(new RegExp(phoneRegexp).test(phone.value))) {
+        console.log("Error. Repeat input phone");
+        return;
+    }
+
+    if (!(new RegExp(emailRegexp).test(email.value))) {
+        console.log("Error. Repeat input email");
+        return;
+    }
+
+    localStorage.setItem('phone', phone.value);
+    localStorage.setItem('email', email.value);
+    localStorage.setItem('name', name.value);
+
+    alert("Your order has been taken over by the administrator and you will be called soon.");
+}

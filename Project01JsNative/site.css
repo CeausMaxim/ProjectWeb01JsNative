@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background: lavender;
-}
 
 .searchbox {
     height: 45px;
@@ -20,6 +17,66 @@ body{
     border: none;
     
 }
+
+/* Page Contacts */
+div.namecnt h1 {
+     margin: 120px 0 0 10%;
+}
+
+
+.img_cnt {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+  
+div.img_contact {
+    padding: 50px;
+    max-width: 1900px;
+}
+
+.infoaboutcnt3 {
+    background-color: #f8f8f8;
+    margin: 10px 50px 50px 50px;
+    padding: 50px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  
+  .infoaboutcnt3__container ul {
+    margin: 15px 0 0 50px;
+    display: grid;
+    list-style: none;
+  }
+  
+  .logimg_cnt {
+    height: 45px;
+    padding: 5px;
+  }
+
+.info4 {
+    background-color: #f8f8f8;
+    margin: 10px 50px 50px 50px;
+    padding: 50px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  }
+  
+  .info4__container ul {
+    margin: 15px 0 0 50px;
+    display: grid;
+    list-style: none;
+  }
+  
+  .info4__container ul li {
+    padding: 5px;
+  }
+
+/* End Contacts */  
 
 /* main section */
 #main{
@@ -349,6 +406,47 @@ footer{
 #you-saved{
     color: rgb(101, 99, 102);
 }
+
+/* Validation delievery */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=tel] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+ /* End validation delievery */ 
 
 /* media queries for responsive view */
 @media only screen and (min-width : 800px){
