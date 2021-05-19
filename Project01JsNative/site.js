@@ -75,36 +75,36 @@ const data = [
 
 let cartList = []; // array for list of product
 
-var i;
-var detail = document.getElementsByClassName('card-item');
-var detailsImg = document.getElementById('details-img')
-var detailTitle = document.getElementById('detail-title')
-var detailPrice = document.getElementById('detail-price')
-var youSave = document.getElementById('you-save');
-var detailsPage = document.getElementById('details-page');
-var back = document.getElementById('buy')
+let i;
+let detail = document.getElementsByClassName('card-item');
+let detailsImg = document.getElementById('details-img')
+let detailTitle = document.getElementById('detail-title')
+let detailPrice = document.getElementById('detail-price')
+let youSave = document.getElementById('you-save');
+let detailsPage = document.getElementById('details-page');
+let back = document.getElementById('buy')
 back.addEventListener('click', refreshPage)
-var addToCarts = document.querySelectorAll('#add-to-cart')
-var cart = document.getElementById('cart');
+let addToCarts = document.querySelectorAll('#add-to-cart')
+let cart = document.getElementById('cart');
 
 // click event to display cart page
 cart.addEventListener('click', displayCart)
 
-var carts = document.getElementById('site');
+let carts = document.getElementById('carts');
 
 //click events to add items to cart from details page
 carts.addEventListener('click', () => addToCart(getId))
 
-var home = document.getElementById('site');
+let home = document.getElementById('site');
 
 
 //click event to hide cart page and return to home page
 home.addEventListener('click', hideCart);
 
-//events on dynamically created element to remove items from list
+//events on to remove items from list
 document.addEventListener('click', function (e) {
     if (e.target.id == 'remove') {
-        var itemId = e.target.parentNode.id
+        let itemId = e.target.parentNode.id
         removeFromCart(itemId)
     }
 })
@@ -115,7 +115,7 @@ for (i = 0; i < data.length; i++) {
     detail[i].addEventListener('click', handleDetail)
 }
 
-var getId;
+let getId;
 
 //click events to add items to cart from home page cart icon
 addToCarts.forEach(val => val.addEventListener('click', () => addToCart(val.parentNode.id)));
@@ -156,7 +156,7 @@ function hideCart() {
     document.getElementById('cart-container').style.display = "none";
 }
 
-// страница корзины
+// Page of cart
 function displayCart() {
     document.getElementById('main').style.display = "none";
     document.getElementById('details-page').style.display = "none";
@@ -173,49 +173,49 @@ function displayCart() {
 }
 
 validationHandler();
-var totalAmount;
-var totalItems;
-var totalSaving;
+let totalAmount;
+let totalItems;
+let totalSaving;
 
 //add item to the cart
 function addItem() {
     totalAmount = 0;
     totalItems = 0;
     totalSaving = 0
-    var clrNode = document.getElementById('item-body');
+    let clrNode = document.getElementById('item-body');
     clrNode.innerHTML = '';
     console.log(clrNode.childNodes)
     cartList.map((cart) => {
-        var cartCont = document.getElementById('item-body');
+        let cartCont = document.getElementById('item-body');
         totalAmount = totalAmount + cart.price;
         totalSaving = totalSaving + cart.save;
         totalItems = totalItems + 1;
 
-        var tempCart = document.createElement('div')
+        let tempCart = document.createElement('div')
         tempCart.setAttribute('class', 'cart-list');
         tempCart.setAttribute('id', cart.id);
 
-        var listImg = document.createElement('img');
+        let listImg = document.createElement('img');
         listImg.setAttribute('id', 'list-img');
         listImg.src = cart.img
         tempCart.appendChild(listImg)
 
-        var listName = document.createElement('h3');
+        let listName = document.createElement('h3');
         listName.setAttribute('class', 'list-name');
         listName.innerHTML = cart.name;
         tempCart.appendChild(listName)
 
-        var listPay = document.createElement('h3');
+        let listPay = document.createElement('h3');
         listPay.setAttribute('class', 'pay');
         listPay.innerHTML = cart.price;
         tempCart.appendChild(listPay);
 
-        var listQuantity = document.createElement('h3');
+        let listQuantity = document.createElement('h3');
         listQuantity.setAttribute('class', 'quantity');
         listQuantity.innerHTML = '1';
         tempCart.appendChild(listQuantity);
 
-        var listTrash = document.createElement('i');
+        let listTrash = document.createElement('i');
         listTrash.setAttribute('class', 'fa fa-trash ');
         listTrash.setAttribute('id', 'remove');
         tempCart.appendChild(listTrash);
@@ -275,5 +275,5 @@ function validateData() {
     localStorage.setItem('email', email.value);
     localStorage.setItem('name', name.value);
 
-    alert("Your order has been taken over by the administrator and you will be called soon.");
+    alert("Your order has been accepted. Expect delivery!");
 }
