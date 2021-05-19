@@ -4,18 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    background: gray;
+}
+
 .searchbox {
     height: 45px;
     width: 700px;
-    margin: 35px;
+    margin: 2px;
 }
 
 .logos {
-    height: 100px;
+    height: 65px;
     margin: -20px 10px;
-    border-radius: 1rem;
-    border: none;
-    
+    width: 100px;
 }
 
 /* Page Contacts */
@@ -56,7 +58,7 @@ div.img_contact {
     padding: 5px;
   }
 
-.info4 {
+.infoaboutcnt4 {
     background-color: #f8f8f8;
     margin: 10px 50px 50px 50px;
     padding: 50px;
@@ -66,13 +68,13 @@ div.img_contact {
     box-shadow: 0 10px 6px -6px #777;
   }
   
-  .info4__container ul {
+  .infoaboutcnt4__container ul {
     margin: 15px 0 0 50px;
     display: grid;
     list-style: none;
   }
   
-  .info4__container ul li {
+  .infoaboutcnt4__container ul li {
     padding: 5px;
   }
 
@@ -97,20 +99,6 @@ div.img_contact {
     position: relative;
 }
 
-.brand-img{                                      
-    height: 4.2rem;
-    width: 2.2rem;
-    position: relative;
-    top: -2.5px;
-    margin: auto;
-    text-align: center;
-}
-#brand-name{
-    font-family: sans-serif;
-    text-transform: capitalize;
-    margin-top: 10px;
-    color: teal;
-}
 .categories{
     margin-top: 25px;
 }
@@ -169,7 +157,7 @@ div.img_contact {
 }
 #item-name{
     text-align: left;
-    color: lightseagreen;
+    color: rgb(13, 14, 13);
     margin-top: 1rem;
     font-size: 0.95rem;
 }
@@ -188,7 +176,7 @@ div.img_contact {
     opacity: 1;
 }
 #item-price{
-    color: rgb(199, 110, 110);
+    color: rgb(7, 7, 7);
     text-align: left;
     margin-top: 0.5rem;
 }
@@ -232,14 +220,6 @@ footer{
 }
 .footer p{
     line-height: 1.5rem;
-}
-
-#copyright{
-    margin-top: 3rem;
-    text-align: center;
-    background: rgb(39, 38, 38);
-    padding: 0.7rem 0;
-    font-size: 1.2rem;
 }
 
 .footer .social-media i{
@@ -328,7 +308,7 @@ footer{
     color: white;
 }
 #carts:active{
-    background: white;
+    background: black;
     color: rgb(238, 166, 12);
 }
 #buy{
@@ -350,7 +330,7 @@ footer{
     font-size: 3.5rem;
     text-align: center;
     font-family: sans-serif;
-    color: rgb(146, 78, 78);
+    color: rgb(15, 228, 210);
 }
 #empty-cart{
     display: none;
@@ -402,7 +382,7 @@ footer{
 }
 
 /* Validation delievery */
-input[type=text], select, textarea {
+.validinputs {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -519,6 +499,7 @@ input[type=text], select, textarea {
   
   .header-right {
     float: right;
+    
   }
   
   @media screen and (max-width: 500px) {
