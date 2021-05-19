@@ -88,12 +88,7 @@ div.img_contact {
     padding: 0.5rem 0.3rem;
     background: rgba(253, 253, 253, 0.924);
 }
-.brand{
-    width: 4rem;
-    text-align: center;
-    margin-right: 1rem;
-    cursor: pointer;
-}
+
 .img-container{
     width: 4rem;
     height: 4rem;
@@ -122,7 +117,7 @@ div.img_contact {
 .title-container{
     display: flex;
     justify-content: space-between;
-    background: white;
+    background: gray;
     padding: 1rem 0.5rem;
 }
 #item-btn{
@@ -139,7 +134,7 @@ div.img_contact {
 }
 #title{
     font-size: 2rem;
-    background: white;
+    background: gray;
 }
 .card{
     display: grid;
@@ -150,14 +145,13 @@ div.img_contact {
     font-family: sans-serif;
 }
 .item-container{
-    background: white;
+    background: cyan;
     position: relative;
-    background: white;
     padding: 15px 12px;
     position: relative;
 }
 .item-container:hover{
-    background: lavender;
+    background: orangered;
     transition: all 0.7s ease-in-out;
 }
 .item-container:hover #card-img{
